@@ -37,7 +37,7 @@ fi
 
 # Clone the template
 echo "📥 Downloading template from GitHub..."
-git clone --branch SwiftUI_AUv3 --depth 1 https://github.com/hagenkaiser/AudioKitTemplate.git "$PROJECT_DIR"
+git clone --depth 1 https://github.com/hagenkaiser/AudioKitTemplate.git "$PROJECT_DIR"
 
 cd "$PROJECT_DIR"
 
