@@ -9,14 +9,20 @@ echo "🎵 AudioKit AUv3 Instrument Template Setup"
 echo "=========================================="
 echo ""
 
-# Get project details from user
-read -p "Enter your project name (e.g., MySynth): " PROJECT_NAME
-read -p "Enter bundle identifier prefix (e.g., com.yourcompany): " BUNDLE_PREFIX
-read -p "Enter manufacturer code (4 chars, e.g., TEST): " MANUFACTURER_CODE
-read -p "Enter subtype code (4 chars, e.g., syn1): " SUBTYPE_CODE
-read -p "Enter destination directory (default: ~/Desktop): " DEST_DIR
+# Get project details from user with defaults
+read -p "Project name [MySynth]: " PROJECT_NAME
+PROJECT_NAME=${PROJECT_NAME:-MySynth}
 
-# Set default destination
+read -p "Bundle identifier prefix [com.yourcompany]: " BUNDLE_PREFIX
+BUNDLE_PREFIX=${BUNDLE_PREFIX:-com.yourcompany}
+
+read -p "Manufacturer code (4 chars) [TEST]: " MANUFACTURER_CODE
+MANUFACTURER_CODE=${MANUFACTURER_CODE:-TEST}
+
+read -p "Subtype code (4 chars) [syn1]: " SUBTYPE_CODE
+SUBTYPE_CODE=${SUBTYPE_CODE:-syn1}
+
+read -p "Destination directory [~/Desktop]: " DEST_DIR
 DEST_DIR=${DEST_DIR:-~/Desktop}
 DEST_DIR="${DEST_DIR/#\~/$HOME}"
 
